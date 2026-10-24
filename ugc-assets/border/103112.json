@@ -1,0 +1,39 @@
+{
+  "m_Rect": {
+    "x": 0.0,
+    "y": 0.0,
+    "width": 64.0,
+    "height": 64.0
+  },
+  "m_Border": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0,
+    "W": 0.0
+  },
+  "m_PixelsToUnits": 1.0,
+  "m_Pivot": {
+    "X": 0.5,
+    "Y": 0.5
+  },
+  "m_Offset": {
+    "X": 0.0,
+    "Y": 0.0
+  },
+  "m_RD": {
+    "textureRect": {
+      "x": 7.0761204,
+      "y": 4.026751,
+      "width": 48.847755,
+      "height": 55.946495
+    },
+    "textureRectOffset": {
+      "X": 7.0761204,
+      "Y": 4.026751
+    },
+    "downscaleMultiplier": 1.0,
+    "settingsRaw": {
+      "packingRotation": "None"
+    }
+  }
+}

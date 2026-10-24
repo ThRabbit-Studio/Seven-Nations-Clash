@@ -6,8 +6,16 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
-const SPRITE_DIR = 'C:\\ugc\\ClientUIAnimationEditor\\site\\ugc-tool-data\\Public\\CustomUIImage\\sprite';
-const BORDER_DIR = 'C:\\ugc\\ClientUIAnimationEditor\\site\\ugc-tool-data\\Public\\CustomUIImage\\border';
+// 素材根目录：优先工程内 ugc-assets/（仓库自包含），回退到本机 C:\ugc 安装路径
+const CANDIDATE_ROOTS = [
+  path.join(root, 'ugc-assets'),
+  'C:\\ugc\\ClientUIAnimationEditor\\site\\ugc-tool-data\\Public\\CustomUIImage',
+];
+const ASSET_ROOT = CANDIDATE_ROOTS.find(d => fs.existsSync(path.join(d, 'sprite')));
+if (!ASSET_ROOT) throw new Error('找不到千星奇域素材库：ugc-assets/ 不存在且 C:\\ugc 未安装');
+const SPRITE_DIR = path.join(ASSET_ROOT, 'sprite');
+const BORDER_DIR = path.join(ASSET_ROOT, 'border');
+console.log('素材库:', ASSET_ROOT);
 
 // 选中素材清单: key -> [assetID, 九宫格边距 m_Border(X,Y,Z,W) 若为拉伸件]
 const PICK = {

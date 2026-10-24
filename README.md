@@ -55,6 +55,7 @@ node tools/build.mjs   # 生成单文件 七国杀.html（内嵌 116 张 UI 素�
 assets/render/       # 官方透明底抽卡立绘（选将/图鉴）
 assets/face/         # 官方头像（对局座位）
 assets/portraits/    # 官方立绘原图（备份）
+ugc-assets/          # 千星奇域 UGC 素材库全量副本（1522 图元+元数据，构建自包含）
 tools/               # 源码与构建脚本
 docs/                # 预览截图
 ```
@@ -63,3 +64,4 @@ docs/                # 预览截图
 
 《原神》角色立绘与名称 © miHoYo / HoYoverse。本项目为个人学习研究用途的同人作品，**不得用于商业用途**。
 Genshin Impact and its assets are trademarks of miHoYo / HoYoverse. This is a non-commercial fan project for personal study only.
+`ugc-assets/` 为千星奇域 UGC 编辑器公开素材库副本，仅随本工具生态用于个人学习研究。
